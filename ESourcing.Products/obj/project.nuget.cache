@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "05fNgPxD/CuIJa9UT2gDctwRGSw+crMH0C49uIni1oUU3/hjUqSG7U30J+pmPabViopgnIOXFtHXO/a7h2JlRw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Rufat\\Desktop\\EAuctionWebApp\\ESourcing.Products\\ESourcing.Products.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rufat\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Rufat\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Rufat\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\Rufat\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\Rufat\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\Rufat\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
