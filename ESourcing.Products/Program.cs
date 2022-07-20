@@ -1,5 +1,6 @@
 using ESourcing.Products.Data;
 using ESourcing.Products.Data.Interfaces;
+using ESourcing.Products.Repositories;
 using ESourcing.Products.Repositories.Interfaces;
 using ESourcing.Products.Settings;
 using Microsoft.Extensions.Options;
@@ -15,7 +16,7 @@ builder.Services.Configure<ProductDatabaseSettings>(builder.Configuration.GetSec
 builder.Services.AddSingleton<IProductDatabaseSettings>(sp => sp.GetRequiredService<IOptions<ProductDatabaseSettings>>().Value);
 
 builder.Services.AddTransient<IProductContext, ProductContext>();
-builder.Services.AddTransient<IProductRepository, IProductRepository>();
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

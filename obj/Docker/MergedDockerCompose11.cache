@@ -1,0 +1,29 @@
+services:
+  esourcing.products:
+    build:
+      context: C:\Users\Rufat\Desktop\EAuctionWebApp
+      dockerfile: ESourcing.Products/Dockerfile
+    container_name: esourcingproduct
+    depends_on:
+      mongo:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ProductDatabaseSettings:ConnectionString: mongodb://localhost:27017
+    image: esourcingproducts
+    ports:
+    - published: 8000
+      target: 80
+    volumes:
+    - /.aspnet/https:/root/.aspnet/https/:rw
+    - /.microsoft/usersecrets:/root/.microsoft/usersecrets:rw
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+    - published: 27017
+      target: 27017
+    restart: always
+    volumes:
+    - /site:/data/db:rw
+version: '3.4'

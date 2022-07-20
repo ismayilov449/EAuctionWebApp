@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UNgEwL52htuYxiKWj4V7qo0ieCa64ArOpoU2OmyfSmM17D8FnzsPQ8/HwTlFoAs9l7G0MGVzcvRNwfuvNf2nQA==",
+  "dgSpecHash": "O9iwrYhFqxQqcal+SiGvNche350N/L6AORVy2zQijSqJYHtg/RWDq3TNCKr+MQNDdnQEJ58xj9L6zrlxifqOTw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rufat\\Desktop\\EAuctionWebApp\\ESourcing.Products\\ESourcing.Products.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Rufat\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Rufat\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Rufat\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Rufat\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512",
     "C:\\Users\\Rufat\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Rufat\\.nuget\\packages\\mongodb.bson\\2.16.1\\mongodb.bson.2.16.1.nupkg.sha512",
     "C:\\Users\\Rufat\\.nuget\\packages\\mongodb.driver\\2.16.1\\mongodb.driver.2.16.1.nupkg.sha512",

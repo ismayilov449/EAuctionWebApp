@@ -1,0 +1,16 @@
+services:
+  esourcing.products:
+    build:
+      context: C:\Users\Rufat\Desktop\EAuctionWebApp
+      dockerfile: ESourcing.Products/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: esourcingproducts
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\Rufat\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Rufat\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

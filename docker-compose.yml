@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  mongo:
+    image: mongo
+
+  esourcing.products:
+    image: ${DOCKER_REGISTRY-}esourcingproducts
+    build:
+      context: .
+      dockerfile: ESourcing.Products/Dockerfile
