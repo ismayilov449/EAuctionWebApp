@@ -3,42 +3,38 @@ services:
     build:
       context: C:\Users\Rufat\Desktop\EAuctionWebApp
       dockerfile: ESourcing.Products/Dockerfile
-      labels:
-        com.microsoft.created-by: visual-studio
-        com.microsoft.visual-studio.project-name: ESourcing.Products
-      target: base
     container_name: esourcingproduct
     depends_on:
       mongo:
         condition: service_started
-    entrypoint: tail -f /dev/null
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
-      DOTNET_USE_POLLING_FILE_WATCHER: '1'
-      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
-      ProductDatabaseSettings:ConnectionString: mongodb://localhost:27017
-    image: esourcingproducts:dev
-    labels:
-      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
-        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net6.0/ESourcing.Products.dll"'
-      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
-        dotnet); then kill $$PID; fi"
-      com.microsoft.visualstudio.debuggee.program: dotnet
-      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+      ProductDatabaseSettings:ConnectionStrings: mongodb://mongo:27017
+    image: esourcingproducts
     ports:
-    - published: 8000
+    - published: 8002
       target: 80
-    tty: true
     volumes:
-    - C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Products:/app:rw
-    - C:\Users\Rufat\vsdbg\vs2017u5:/remote_debugger:rw
     - C:\Users\Rufat\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
-    - /.aspnet/https:/root/.aspnet/https/:rw
     - C:\Users\Rufat\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
-    - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
-    - C:\Users\Rufat\.nuget\packages:/root/.nuget/packages:ro
-    - C:\Users\Rufat\Desktop\EAuctionWebApp:/src:rw
+  esourcing.sourcing:
+    build:
+      context: C:\Users\Rufat\Desktop\EAuctionWebApp
+      dockerfile: ESourcing.Sourcing/Dockerfile
+    container_name: esourcingsourcing
+    depends_on:
+      mongo:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      SourcingDatabaseSettings:ConnectionString: mongodb://mongo:27017
+    image: esourcingsourcing
+    ports:
+    - published: 8001
+      target: 80
+    volumes:
+    - C:\Users\Rufat\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Rufat\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
   mongo:
     container_name: mongo
     image: mongo
