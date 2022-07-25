@@ -1,0 +1,12 @@
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\EventBusRabbitMQ\bin\Debug\net6.0\EventBusRabbitMQ.deps.json
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\EventBusRabbitMQ\bin\Debug\net6.0\EventBusRabbitMQ.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\EventBusRabbitMQ\bin\Debug\net6.0\EventBusRabbitMQ.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\EventBusRabbitMQ\obj\Debug\net6.0\EventBusRabbitMQ.csproj.AssemblyReference.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\EventBusRabbitMQ\obj\Debug\net6.0\EventBusRabbitMQ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\EventBusRabbitMQ\obj\Debug\net6.0\EventBusRabbitMQ.AssemblyInfoInputs.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\EventBusRabbitMQ\obj\Debug\net6.0\EventBusRabbitMQ.AssemblyInfo.cs
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\EventBusRabbitMQ\obj\Debug\net6.0\EventBusRabbitMQ.csproj.CoreCompileInputs.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\EventBusRabbitMQ\obj\Debug\net6.0\EventBusRabbitMQ.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\EventBusRabbitMQ\obj\Debug\net6.0\refint\EventBusRabbitMQ.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\EventBusRabbitMQ\obj\Debug\net6.0\EventBusRabbitMQ.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\EventBusRabbitMQ\obj\Debug\net6.0\ref\EventBusRabbitMQ.dll

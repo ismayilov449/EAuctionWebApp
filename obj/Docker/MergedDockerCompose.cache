@@ -3,14 +3,45 @@ services:
     build:
       context: C:\Users\Rufat\Desktop\EAuctionWebApp
       dockerfile: ESourcing.Products/Dockerfile
+    container_name: esourcingproduct
+    depends_on:
+      mongo:
+        condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_URLS: https://+:443;http://+:80
+      ProductDatabaseSettings:ConnectionStrings: mongodb://mongo:27017
     image: esourcingproducts
     ports:
-    - target: 80
-    - target: 443
+    - published: 8002
+      target: 80
     volumes:
     - C:\Users\Rufat\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
     - C:\Users\Rufat\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  esourcing.sourcing:
+    build:
+      context: C:\Users\Rufat\Desktop\EAuctionWebApp
+      dockerfile: ESourcing.Sourcing/Dockerfile
+    container_name: esourcingsourcing
+    depends_on:
+      mongo:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      SourcingDatabaseSettings:ConnectionString: mongodb://mongo:27017
+    image: esourcingsourcing
+    ports:
+    - published: 8001
+      target: 80
+    volumes:
+    - C:\Users\Rufat\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Rufat\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+    - published: 27017
+      target: 27017
+    restart: always
+    volumes:
+    - /site:/data/db:rw
 version: '3.4'

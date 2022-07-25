@@ -18,3 +18,16 @@ C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\ESourcing.Products.pdb
 C:\Users\Rufat\Desktop\EAuctionWebApp\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\Users\Rufat\Desktop\EAuctionWebApp\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\Rufat\Desktop\EAuctionWebApp\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\ESourcing.Sourcing.deps.json
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\ESourcing.Sourcing.runtimeconfig.json
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\EventBusRabbitMQ\obj\EventBusRabbitMQ.csproj.nuget.dgspec.json
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\EventBusRabbitMQ\obj\project.assets.json
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\ESourcing.Sourcing.exe
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\ESourcing.Sourcing.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\ESourcing.Sourcing.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\RabbitMQ.Client.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\Polly.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\AutoMapper.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\Newtonsoft.Json.dll

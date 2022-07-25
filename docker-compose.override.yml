@@ -11,30 +11,39 @@ services:
     ports:
         - "27017:27017"
 
+
+  rabbitmq:
+    container_name: rabbitmq
+    restart: always
+    ports:
+        - "5672:5672"
+        - "15672:15672"
+
   esourcing.products:
     container_name: esourcingproduct
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - "ProductDatabaseSettings:ConnectionStrings=mongodb://mongo:27017"
+        - ASPNETCORE_ENVIRONMENT=Development
+        - "ProductDatabaseSettings:ConnectionStrings=mongodb://mongo:27017"
 
     depends_on:
         - mongo
     ports:
-      - "8002:80"
+        - "8002:80"
     volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+        - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+        - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
 
   esourcing.sourcing:
    container_name: esourcingsourcing
    environment:
-    - ASPNETCORE_ENVIRONMENT=Development
-    - "SourcingDatabaseSettings:ConnectionString=mongodb://mongo:27017"
-   
+        - ASPNETCORE_ENVIRONMENT=Development
+        - "SourcingDatabaseSettings:ConnectionString=mongodb://mongo:27017"
+        - "EventBus:HostName=rabbitmq"
    depends_on:
         - mongo
+        - rabbitmq
    volumes:
-     - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-     - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+        - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+        - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
    ports:
-    - "8001:80"
+        - "8001:80"

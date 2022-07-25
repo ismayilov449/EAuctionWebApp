@@ -84,3 +84,13 @@ C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\obj\Debug\net6.0\refint
 C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\obj\Debug\net6.0\ESourcing.Sourcing.pdb
 C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\obj\Debug\net6.0\ESourcing.Sourcing.genruntimeconfig.cache
 C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\obj\Debug\net6.0\ref\ESourcing.Sourcing.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\bin\Debug\net6.0\EventBusRabbitMQ\obj\EventBusRabbitMQ.csproj.nuget.dgspec.json
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\bin\Debug\net6.0\EventBusRabbitMQ\obj\project.assets.json
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\bin\Debug\net6.0\Polly.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\bin\Debug\net6.0\EventBusRabbitMQ.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Sourcing\bin\Debug\net6.0\EventBusRabbitMQ.pdb
