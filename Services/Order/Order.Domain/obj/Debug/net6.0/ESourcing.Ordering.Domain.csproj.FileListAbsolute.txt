@@ -1,0 +1,12 @@
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Domain\bin\Debug\net6.0\ESourcing.Ordering.Domain.deps.json
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Domain\bin\Debug\net6.0\ESourcing.Ordering.Domain.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Domain\bin\Debug\net6.0\ESourcing.Ordering.Domain.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Domain\obj\Debug\net6.0\ESourcing.Ordering.Domain.csproj.AssemblyReference.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Domain\obj\Debug\net6.0\ESourcing.Ordering.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Domain\obj\Debug\net6.0\ESourcing.Ordering.Domain.AssemblyInfoInputs.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Domain\obj\Debug\net6.0\ESourcing.Ordering.Domain.AssemblyInfo.cs
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Domain\obj\Debug\net6.0\ESourcing.Ordering.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Domain\obj\Debug\net6.0\ESourcing.Ordering.Domain.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Domain\obj\Debug\net6.0\refint\ESourcing.Ordering.Domain.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Domain\obj\Debug\net6.0\ESourcing.Ordering.Domain.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Domain\obj\Debug\net6.0\ref\ESourcing.Ordering.Domain.dll

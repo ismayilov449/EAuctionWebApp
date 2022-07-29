@@ -1,0 +1,17 @@
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\bin\Debug\net6.0\ESourcing.Ordering.Infrastructure.deps.json
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\bin\Debug\net6.0\ESourcing.Ordering.Infrastructure.runtimeconfig.json
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\bin\Debug\net6.0\ESourcing.Ordering.Infrastructure.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\bin\Debug\net6.0\ESourcing.Ordering.Infrastructure.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\bin\Debug\net6.0\ESourcing.Ordering.Domain.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\bin\Debug\net6.0\ESourcing.Ordering.Domain.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\ESourcing.Ordering.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\ESourcing.Ordering.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\ESourcing.Ordering.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\ESourcing.Ordering.Infrastructure.AssemblyInfo.cs
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\ESourcing.Ordering.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\ESourcing.Ordering.Infrastructure.csproj.CopyComplete
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\ESourcing.Ordering.Infrastructure.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\refint\ESourcing.Ordering.Infrastructure.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\ESourcing.Ordering.Infrastructure.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\ESourcing.Ordering.Infrastructure.genruntimeconfig.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\ref\ESourcing.Ordering.Infrastructure.dll

@@ -1,0 +1,12 @@
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\bin\Debug\net6.0\Order.Application.deps.json
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\bin\Debug\net6.0\Order.Application.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\bin\Debug\net6.0\Order.Application.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\Order.Application.csproj.AssemblyReference.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\Order.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\Order.Application.AssemblyInfoInputs.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\Order.Application.AssemblyInfo.cs
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\Order.Application.csproj.CoreCompileInputs.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\Order.Application.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\refint\Order.Application.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\Order.Application.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\ref\Order.Application.dll

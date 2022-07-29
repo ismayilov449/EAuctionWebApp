@@ -1,0 +1,12 @@
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\bin\Debug\net6.0\Order.Infrastructure.deps.json
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\bin\Debug\net6.0\Order.Infrastructure.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\bin\Debug\net6.0\Order.Infrastructure.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.AssemblyInfo.cs
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\refint\Order.Infrastructure.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Infrastructure\obj\Debug\net6.0\ref\Order.Infrastructure.dll

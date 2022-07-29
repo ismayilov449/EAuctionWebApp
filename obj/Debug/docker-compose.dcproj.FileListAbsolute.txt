@@ -31,3 +31,5 @@ C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\Polly.dll
 C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\AutoMapper.dll
 C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\EventBusRabbitMQ.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\EventBusRabbitMQ.pdb

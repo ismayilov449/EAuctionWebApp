@@ -1,0 +1,15 @@
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\bin\Debug\net6.0\ESouring.Ordering.Application.deps.json
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\bin\Debug\net6.0\ESouring.Ordering.Application.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\bin\Debug\net6.0\ESouring.Ordering.Application.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\ESouring.Ordering.Application.csproj.AssemblyReference.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\ESouring.Ordering.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\ESouring.Ordering.Application.AssemblyInfoInputs.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\ESouring.Ordering.Application.AssemblyInfo.cs
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\ESouring.Ordering.Application.csproj.CoreCompileInputs.cache
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\ESouring.Ordering.Application.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\refint\ESouring.Ordering.Application.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\ESouring.Ordering.Application.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\ref\ESouring.Ordering.Application.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\bin\Debug\net6.0\ESourcing.Ordering.Domain.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\bin\Debug\net6.0\ESourcing.Ordering.Domain.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\Services\Order\Order.Application\obj\Debug\net6.0\ESouring.Ordering.Application.csproj.CopyComplete
