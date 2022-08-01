@@ -16,6 +16,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddInfrastuctureDependencies(builder.Configuration);
 builder.Services.AddApplicationDependencies();
+builder.Services.AddAutoMapper(typeof(Program));
 
 #endregion
 

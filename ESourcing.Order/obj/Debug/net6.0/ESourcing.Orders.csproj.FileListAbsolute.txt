@@ -77,3 +77,5 @@ C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\Polly.dll
 C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\RabbitMQ.Client.dll
 C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\EventBusRabbitMQ.dll
 C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\EventBusRabbitMQ.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll

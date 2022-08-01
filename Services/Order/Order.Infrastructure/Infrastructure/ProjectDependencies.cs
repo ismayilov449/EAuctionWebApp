@@ -20,7 +20,14 @@ namespace ESourcing.Ordering.Infrastructure.Infrastructure
         public static IServiceCollection AddInfrastuctureDependencies(this IServiceCollection services, IConfiguration configuration)
         {
 
-            services.AddDbContext<OrderDBContext>(opt => opt.UseInMemoryDatabase("InMemoryDb"), ServiceLifetime.Singleton, ServiceLifetime.Singleton);
+            //services.AddDbContext<OrderDBContext>(opt => opt.UseInMemoryDatabase("InMemoryDb"), ServiceLifetime.Singleton, ServiceLifetime.Singleton);
+
+
+            services.AddDbContext<OrderDBContext>(opt =>
+                opt.UseSqlServer(
+                    configuration.GetConnectionString("OrderConnection"),
+                    b => b.MigrationsAssembly(typeof(OrderDBContext).Assembly.FullName)), ServiceLifetime.Singleton
+            );
 
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient<IOrderRepository, OrderRepesitory>();
