@@ -71,3 +71,9 @@ C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\MediatR.C
 C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\ESouring.Ordering.Application.dll
 C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\ESouring.Ordering.Application.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\Polly.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\EventBusRabbitMQ.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\ESourcing.Order\bin\Debug\net6.0\EventBusRabbitMQ.pdb

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ESouring.Ordering.Application.Mapper;
+using ESouring.Ordering.Application.PipelineBehaviours;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,9 +18,13 @@ namespace ESouring.Ordering.Application.Infrastructure
         public static IServiceCollection AddApplicationDependencies(this IServiceCollection services)
         {
 
+            services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformanceBehaviour<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
 
             #region Configure Mapper
             var config = new MapperConfiguration(conf =>

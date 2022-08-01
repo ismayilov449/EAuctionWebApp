@@ -7,6 +7,9 @@ services:
   rabbitmq:
      image: rabbitmq:3-management
 
+  sql:
+    image: mcr.microsoft.com/mssql/server
+
   esourcing.products:
     image: ${DOCKER_REGISTRY-}esourcingproducts
     build:

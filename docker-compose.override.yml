@@ -11,6 +11,14 @@ services:
     ports:
         - "27017:27017"
 
+  sql:
+    container_name: sql
+    restart: always
+    ports:
+        - "1433:1433" 
+    environment:
+        SA_PASSWORD: "sqlserver2022"
+        ACCEPT_EULA: "Y"
 
   rabbitmq:
     container_name: rabbitmq
