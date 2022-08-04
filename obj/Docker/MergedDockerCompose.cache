@@ -1,9 +1,51 @@
 services:
+  esourcing.apigateway:
+    build:
+      context: C:\Users\Rufat\Desktop\EAuctionWebApp
+      dockerfile: ESourcing.ApiGateway/Dockerfile
+    container_name: apigateway
+    depends_on:
+      esourcing.orders:
+        condition: service_started
+      esourcing.products:
+        condition: service_started
+      esourcing.sourcing:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: esourcingapigateway
+    ports:
+    - published: 5000
+      target: 80
+    volumes:
+    - C:\Users\Rufat\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Rufat\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  esourcing.orders:
+    build:
+      context: C:\Users\Rufat\Desktop\EAuctionWebApp
+      dockerfile: ESourcing.Order/Dockerfile
+    container_name: esourcingorders
+    depends_on:
+      rabbitmq:
+        condition: service_started
+      sql:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings:OrderConnection: Server=sql;Database=OrderDb;User Id=sa;Password=Sqlserver2022
+      EventBus:HostName: rabbitmq
+    image: esourcingorders
+    ports:
+    - published: 8003
+      target: 80
+    volumes:
+    - C:\Users\Rufat\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Rufat\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
   esourcing.products:
     build:
       context: C:\Users\Rufat\Desktop\EAuctionWebApp
       dockerfile: ESourcing.Products/Dockerfile
-    container_name: esourcingproduct
+    container_name: esourcingproducts
     depends_on:
       mongo:
         condition: service_started
@@ -25,8 +67,11 @@ services:
     depends_on:
       mongo:
         condition: service_started
+      rabbitmq:
+        condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
+      EventBus:HostName: rabbitmq
       SourcingDatabaseSettings:ConnectionString: mongodb://mongo:27017
     image: esourcingsourcing
     ports:
@@ -44,4 +89,23 @@ services:
     restart: always
     volumes:
     - /site:/data/db:rw
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+    restart: always
+  sql:
+    container_name: sql
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Sqlserver2022
+    image: mcr.microsoft.com/mssql/server
+    ports:
+    - published: 1433
+      target: 1433
+    restart: always
 version: '3.4'

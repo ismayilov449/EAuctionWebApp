@@ -28,7 +28,7 @@ namespace ESourcing.Sourcing.Controllers
 
         [HttpGet("GetBidWinner")]
         [ProducesResponseType(typeof(Bid), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetBidWinner([FromQuery] string id)
+        public async Task<IActionResult> GetBidWinner(string id)
         {
             var res = await _repository.GetBidWinner(id);
             return Ok(res);
@@ -36,7 +36,7 @@ namespace ESourcing.Sourcing.Controllers
 
         [HttpGet("GetBidByAuctionId")]
         [ProducesResponseType(typeof(IEnumerable<Bid>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetBidByAuctionId([FromQuery] string id)
+        public async Task<IActionResult> GetBidByAuctionId(string id)
         {
             var res = await _repository.GetBidsByAuctionId(id);
             return Ok(res);

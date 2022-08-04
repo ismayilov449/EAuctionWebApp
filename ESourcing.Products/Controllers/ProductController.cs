@@ -36,27 +36,26 @@ namespace ESourcing.Products.Controllers
             return Ok(res);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> Delete([FromQuery] string id)
+        public async Task<IActionResult> Delete(string id)
         {
             return Ok(await _productRepository.Delete(id));
         }
 
 
-        [HttpGet("GetAll")]
+        [HttpGet]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<Product>>> GetAll()
+        public async Task<ActionResult<IEnumerable<Product>>> Get()
         {
             var res = await _productRepository.GetProducts();
             return Ok(res);
         }
 
-        //[HttpGet("{id:length(24)}", Name = "GetById")]
-        [HttpGet("GetById")]
+        [HttpGet("{id}")]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<Product>> GetById([FromQuery] string id)
+        public async Task<ActionResult<Product>> Get(string id)
         {
             var res = await _productRepository.GetById(id);
             if (res is not null)
@@ -69,15 +68,5 @@ namespace ESourcing.Products.Controllers
                 return NotFound();
             }
         }
-
-        [HttpGet("GetByCategoryName")]
-        [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<Product>>> GetByCategoryName([FromQuery] string categoryName)
-        {
-            var res = await _productRepository.GetProductByCategory(categoryName);
-            return Ok(res);
-        }
-
-
     }
 }

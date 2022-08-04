@@ -30,18 +30,18 @@ namespace ESourcing.Sourcing.Controllers
             _mQProducer = mQProducer;
         }
 
-        [HttpGet("GetAll")]
+        [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Auction>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> Get()
         {
             var res = await _auctionRepository.GetAll();
             return Ok(res);
         }
 
-        [HttpGet("GetById")]
+        [HttpGet("{id}")]
         [ProducesResponseType(typeof(Auction), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public async Task<IActionResult> GetById([FromQuery] string id)
+        public async Task<IActionResult> Get(string id)
         {
             var res = await _auctionRepository.GetById(id);
             if (res is null)
@@ -95,7 +95,7 @@ namespace ESourcing.Sourcing.Controllers
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.Accepted)]
-        public async Task<IActionResult> CompleteAuction([FromQuery] string auctionId)
+        public async Task<IActionResult> CompleteAuction(string auctionId)
         {
             var auction = await _auctionRepository.GetById(auctionId);
             if (auction is null)
