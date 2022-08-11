@@ -69,3 +69,8 @@ C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\Microsoft.AspNetCore.MiddlewareA
 C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\Newtonsoft.Json.Bson.dll
 C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\ESourcing.ApiGateway.pdb
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\AspNetCoreRateLimit.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\StackExchange.Redis.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\Pipelines.Sockets.Unofficial.dll
+C:\Users\Rufat\Desktop\EAuctionWebApp\bin\Debug\System.Diagnostics.PerformanceCounter.dll

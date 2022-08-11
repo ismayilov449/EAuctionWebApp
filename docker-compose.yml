@@ -2,13 +2,16 @@ version: '3.4'
 
 services:
   mongo:
-    image: mongo
+     image: mongo
 
   rabbitmq:
      image: rabbitmq:3-management
 
   sql:
-    image: mcr.microsoft.com/mssql/server
+     image: mcr.microsoft.com/mssql/server
+
+  redis:
+     image: redis
 
   esourcing.products:
     image: ${DOCKER_REGISTRY-}esourcingproducts

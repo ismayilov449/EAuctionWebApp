@@ -5,6 +5,7 @@ using ESouring.Ordering.Application.Infrastructure;
 using EventBusRabbitMQ;
 using EventBusRabbitMQ.Producers;
 using RabbitMQ.Client;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +20,6 @@ builder.Services.AddApplicationDependencies();
 builder.Services.AddAutoMapper(typeof(Program));
 
 #endregion
-
 
 #region Event Bus
 builder.Services.AddSingleton<IRabbitMQPersistentConnection>(s =>
@@ -55,6 +55,14 @@ builder.Services.AddSingleton<EventBusOrderCreateConsumer>();
 
 #endregion
 
+
+#region Redis Cache
+
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = "redis:6379,abortConnect=False";
+});
+#endregion
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

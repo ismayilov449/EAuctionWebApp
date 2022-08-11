@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESouring.Ordering.Applicati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESourcing.Ordering.Infrastructure", "Services\Order\Order.Infrastructure\ESourcing.Ordering.Infrastructure.csproj", "{C47B8741-8E0F-42E6-8938-423D8DEAE92E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESourcing.ApiGateway", "ESourcing.ApiGateway\ESourcing.ApiGateway.csproj", "{5788D4BB-DDF9-4501-9356-9D3386AFAB61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESourcing.ApiGateway", "ESourcing.ApiGateway\ESourcing.ApiGateway.csproj", "{5788D4BB-DDF9-4501-9356-9D3386AFAB61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

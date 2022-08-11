@@ -1,20 +1,24 @@
+using AspNetCoreRateLimit;
+using ESourcing.ApiGateway.Infrastructure;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
+var services = builder.Services;
+var host = builder.Host;
 
-// Add services to the container.
+host.ConfigureAppConfiguration((context, config) => { config.AddJsonFile("ocelot.json"); });
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+services.AddpProjectDependencies();
 
-builder.Services.AddOcelot();
+services.AddControllers();
+services.AddEndpointsApiExplorer();
+services.AddSwaggerGen();
 
-builder.Host.ConfigureAppConfiguration((context, config) => { config.AddJsonFile("ocelot.json"); });
 
 var app = builder.Build();
+
+IIpPolicyStore ipPolicy = app.Services.GetRequiredService<IIpPolicyStore>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -22,11 +26,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseIpRateLimiting();
 
-app.UseOcelot();
+await app.UseOcelot();
 
 app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+await ipPolicy.SeedAsync();
+await app.RunAsync();

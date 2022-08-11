@@ -18,6 +18,15 @@ builder.Services.AddSingleton<IProductDatabaseSettings>(sp => sp.GetRequiredServ
 builder.Services.AddTransient<IProductContext, ProductContext>();
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
 
+#region Redis Cache
+
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = "redis:6379,abortConnect=False";
+});
+
+#endregion
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

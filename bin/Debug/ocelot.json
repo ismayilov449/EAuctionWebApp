@@ -31,8 +31,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Port": 80,
-          "Host": "esourcingsourcing"
+          "Host": "esourcingsourcing",
+          "Port": "80",
         }
       ],
       "UpstreamPathTemplate": "/Auction",
@@ -43,11 +43,11 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Port": 80,
-          "Host": "esourcingsourcing"
+          "Host": "esourcingsourcing",
+          "Port": "80",
         }
       ],
-      "UpstreamPathTemplate": "/Auction?id={id}",
+      "UpstreamPathTemplate": "/Auction/{id}",
       "UpstreamHttpMethod": [ "GET", "DELETE" ]
     },
     {
@@ -55,7 +55,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Port": 80,
+          "Port": "80",
           "Host": "esourcingsourcing"
         }
       ],
@@ -68,7 +68,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Port": 80,
+          "Port": "80",
           "Host": "esourcingsourcing"
         }
       ],
@@ -80,7 +80,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Port": 80,
+          "Port": "80",
           "Host": "esourcingsourcing"
         }
       ],
@@ -92,7 +92,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Port": 80,
+          "Port": "80",
           "Host": "esourcingsourcing"
         }
       ],
@@ -105,11 +105,11 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Port": 80,
+          "Port": "80",
           "Host": "esourcingorders"
         }
       ],
-      "UpstreamPathTemplate": "/api/v1/Order/GetByCategoryName/{categoryName}",
+      "UpstreamPathTemplate": "/api/v1/Order/GetByCategoryName/{username}",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
@@ -117,7 +117,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Port": 80,
+          "Port": "80",
           "Host": "esourcingsourcing"
         }
       ],
