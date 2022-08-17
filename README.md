@@ -1,5 +1,4 @@
 EAuction Web APP
-
 Include :
  
 Net 6.0
