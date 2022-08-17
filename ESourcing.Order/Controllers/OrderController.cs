@@ -1,4 +1,5 @@
 ﻿using ESourcing.Orders.Extensions;
+using ESourcing.Orders.Infrastructure.Model;
 using ESouring.Ordering.Application.Commands.OrderCreate;
 using ESouring.Ordering.Application.Queries.OrderQueries;
 using ESouring.Ordering.Application.Responses;
@@ -26,10 +27,10 @@ namespace ESourcing.Orders.Controllers
         }
 
 
-        [HttpGet("GetOrdersByUsername")]
+        [HttpGet("GetOrdersByUsername/{username}")]
         [ProducesResponseType(typeof(IEnumerable<OrderResponse>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public async Task<IActionResult> GetOrdersByUsername([FromQuery] string username)
+        public async Task<IActionResult> GetOrdersByUsername(string username)
         {
 
             if (_redisCache is not null)

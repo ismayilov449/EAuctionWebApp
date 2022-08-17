@@ -95,5 +95,15 @@ namespace ESourcing.Products.Controllers
                 return NotFound();
             }
         }
+
+        [HttpGet("Exc")]
+        [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<IEnumerable<Product>>> Exc()
+        {
+
+            throw new NullReferenceException();
+
+            return Ok();
+        }
     }
 }

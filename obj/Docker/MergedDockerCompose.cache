@@ -28,6 +28,8 @@ services:
     depends_on:
       rabbitmq:
         condition: service_started
+      redis:
+        condition: service_started
       sql:
         condition: service_started
     environment:
@@ -49,6 +51,8 @@ services:
     depends_on:
       mongo:
         condition: service_started
+      redis:
+        condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ProductDatabaseSettings:ConnectionStrings: mongodb://mongo:27017
@@ -68,6 +72,8 @@ services:
       mongo:
         condition: service_started
       rabbitmq:
+        condition: service_started
+      redis:
         condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -89,6 +95,16 @@ services:
     restart: always
     volumes:
     - /site:/data/db:rw
+  nginx:
+    environment:
+      NGINX_HOST: foobar.com
+      NGINX_PORT: '80'
+    image: nginx
+    ports:
+    - published: 8080
+      target: 80
+    volumes:
+    - C:\Users\Rufat\Desktop\EAuctionWebApp\templates:/etc/nginx/templates:rw
   rabbitmq:
     container_name: rabbitmq
     image: rabbitmq:3-management
@@ -97,6 +113,13 @@ services:
       target: 5672
     - published: 15672
       target: 15672
+    restart: always
+  redis:
+    container_name: redis
+    image: redis
+    ports:
+    - published: 6379
+      target: 6379
     restart: always
   sql:
     container_name: sql

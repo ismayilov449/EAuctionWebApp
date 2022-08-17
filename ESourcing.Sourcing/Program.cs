@@ -1,5 +1,6 @@
 using ESourcing.Sourcing.Data;
 using ESourcing.Sourcing.Data.Interfaces;
+using ESourcing.Sourcing.Infrastructure;
 using ESourcing.Sourcing.Repositories;
 using ESourcing.Sourcing.Repositories.Interfaces;
 using ESourcing.Sourcing.Settings;
@@ -14,7 +15,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-
 #region Project Dependencies
 
 builder.Services.Configure<SourcingDatabaseSettings>(builder.Configuration.GetSection(nameof(SourcingDatabaseSettings)));
@@ -28,7 +28,6 @@ builder.Services.AddTransient<IBidRepository, BidRepository>();
 
 #endregion
 
-
 #region Event Bus
 builder.Services.AddSingleton<IRabbitMQPersistentConnection>(s =>
 {
@@ -37,7 +36,7 @@ builder.Services.AddSingleton<IRabbitMQPersistentConnection>(s =>
     {
         HostName = builder.Configuration["EventBus:HostName"],
     };
-     
+
     if (!string.IsNullOrWhiteSpace(builder.Configuration["EventBus:UserName"]))
     {
         factory.UserName = builder.Configuration["EventBus:UserName"];
@@ -77,6 +76,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ExceptionHandlerMiddleware>();
 
 app.UseAuthorization();
 

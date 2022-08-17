@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wDIXeZ1PoqkPb3TEIDRQXvzDAZauzECEAKm0QU3Yjkf7kjHVEMxwfmFGliunW3iWtRDCf3qkMUOUgYKR5f88og==",
+  "dgSpecHash": "nlxjoeX0XseliSfb0voZ5pBk9iLgdpgHJUb1tk62eVMW86UFIkWpJ9voYHhMbXFogdVpLAVgIASLhOSCsGsQEQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rufat\\Desktop\\EAuctionWebApp\\ESourcing.Order\\ESourcing.Orders.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Rufat\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512",
     "C:\\Users\\Rufat\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.1.0\\fluentvalidation.dependencyinjectionextensions.11.1.0.nupkg.sha512",
     "C:\\Users\\Rufat\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Rufat\\.nuget\\packages\\log4net\\2.0.15\\log4net.2.0.15.nupkg.sha512",
     "C:\\Users\\Rufat\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\Rufat\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Rufat\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",

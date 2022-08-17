@@ -14,7 +14,8 @@
           "Microsoft.EntityFrameworkCore.Design": "6.0.7",
           "Microsoft.Extensions.Caching.StackExchangeRedis": "6.0.7",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.15.1",
-          "Swashbuckle.AspNetCore": "6.2.3"
+          "Swashbuckle.AspNetCore": "6.2.3",
+          "log4net": "2.0.15"
         },
         "runtime": {
           "ESourcing.Orders.dll": {}
@@ -68,6 +69,17 @@
           "lib/netstandard2.0/Humanizer.dll": {
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
+          }
+        }
+      },
+      "log4net/2.0.15": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/log4net.dll": {
+            "assemblyVersion": "2.0.15.0",
+            "fileVersion": "2.0.15.0"
           }
         }
       },
@@ -744,6 +756,13 @@
       "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
+    "log4net/2.0.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GahnO9ZgFka+xYcFwAfIFjW+k86P2nxFoaEpH6t3v4hiGj7tv2ksVZphxCVIHmJxoySS0HeU3dgCW+bSCcfD0A==",
+      "path": "log4net/2.0.15",
+      "hashPath": "log4net.2.0.15.nupkg.sha512"
     },
     "MediatR/10.0.1": {
       "type": "package",

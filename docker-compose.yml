@@ -13,6 +13,9 @@ services:
   redis:
      image: redis
 
+  nginx:
+     image: nginx
+
   esourcing.products:
     image: ${DOCKER_REGISTRY-}esourcingproducts
     build:

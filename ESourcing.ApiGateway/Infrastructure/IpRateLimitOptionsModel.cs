@@ -42,6 +42,18 @@ namespace ESourcing.ApiGateway.Infrastructure
                     Endpoint = "*:/Order",
                     Period = "1m",
                     Limit = 10
+                },
+                new RateLimitRule
+                {
+                    Endpoint = "*:/",
+                    Period = "1m",
+                    Limit = 10
+                },
+                new RateLimitRule
+                {
+                    Endpoint = "*:/swagger",
+                    Period = "1m",
+                    Limit = 10
                 }
             };
 

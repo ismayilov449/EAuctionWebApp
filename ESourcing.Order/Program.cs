@@ -4,25 +4,40 @@ using ESourcing.Orders.Extensions;
 using ESouring.Ordering.Application.Infrastructure;
 using EventBusRabbitMQ;
 using EventBusRabbitMQ.Producers;
+using Microsoft.AspNetCore.Http.Extensions;
+using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using RabbitMQ.Client;
 using StackExchange.Redis;
+using System.Net;
+using System.Net.Sockets;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var services = builder.Services;
+var webHost = builder.WebHost;
 
 builder.Services.AddControllers();
 
+#region Load Balancing
+
+services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+});
+
+#endregion
+
 #region Project Dependencies
 
-builder.Services.AddInfrastuctureDependencies(builder.Configuration);
-builder.Services.AddApplicationDependencies();
-builder.Services.AddAutoMapper(typeof(Program));
+services.AddInfrastuctureDependencies(builder.Configuration);
+services.AddApplicationDependencies();
+services.AddAutoMapper(typeof(Program));
 
 #endregion
 
 #region Event Bus
-builder.Services.AddSingleton<IRabbitMQPersistentConnection>(s =>
+services.AddSingleton<IRabbitMQPersistentConnection>(s =>
 {
     var logger = s.GetRequiredService<ILogger<DefaultRabbitMQPersistentConnection>>();
     var factory = new ConnectionFactory()
@@ -51,23 +66,24 @@ builder.Services.AddSingleton<IRabbitMQPersistentConnection>(s =>
 
 });
 
-builder.Services.AddSingleton<EventBusOrderCreateConsumer>();
+services.AddSingleton<EventBusOrderCreateConsumer>();
 
 #endregion
 
-
 #region Redis Cache
 
-builder.Services.AddStackExchangeRedisCache(options =>
+services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = "redis:6379,abortConnect=False";
 });
 #endregion
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+services.AddEndpointsApiExplorer();
+services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseForwardedHeaders();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -75,6 +91,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseRouting();
 
 app.UseAuthorization();
 
@@ -83,5 +100,39 @@ app.MapControllers();
 app.MigrateDatabase();
 
 app.UseEventBusListener();
+
+app.UseMiddleware<ExceptionHandlerMiddleware>();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapGet("/", async context =>
+    {
+        context.Response.ContentType = "text/plain";
+
+        // Host info
+        var name = Dns.GetHostName(); // get container id
+        var ip = Dns.GetHostEntry(name).AddressList.FirstOrDefault(x => x.AddressFamily == AddressFamily.InterNetwork);
+        Console.WriteLine($"Host Name: {Environment.MachineName} \t {name}\t {ip}");
+        await context.Response.WriteAsync($"Host Name: {Environment.MachineName}{Environment.NewLine}");
+        await context.Response.WriteAsync(Environment.NewLine);
+
+        // Request method, scheme, and path
+        await context.Response.WriteAsync($"Request Method: {context.Request.Method}{Environment.NewLine}");
+        await context.Response.WriteAsync($"Request Scheme: {context.Request.Scheme}{Environment.NewLine}");
+        await context.Response.WriteAsync($"Request URL: {context.Request.GetDisplayUrl()}{Environment.NewLine}");
+        await context.Response.WriteAsync($"Request Path: {context.Request.Path}{Environment.NewLine}");
+
+        // Headers
+        await context.Response.WriteAsync($"Request Headers:{Environment.NewLine}");
+        foreach (var (key, value) in context.Request.Headers)
+        {
+            await context.Response.WriteAsync($"\t {key}: {value}{Environment.NewLine}");
+        }
+        await context.Response.WriteAsync(Environment.NewLine);
+
+        // Connection: RemoteIp
+        await context.Response.WriteAsync($"Request Remote IP: {context.Connection.RemoteIpAddress}");
+    });
+});
 
 app.Run();
